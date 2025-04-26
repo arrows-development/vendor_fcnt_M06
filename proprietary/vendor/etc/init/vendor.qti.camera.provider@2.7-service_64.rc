@@ -9,4 +9,4 @@ service vendor.camera-provider-2-7 /vendor/bin/hw/vendor.qti.camera.provider@2.7
     group audio camera input drmrpc oem_2907
     ioprio rt 4
     capabilities SYS_NICE
-    task_profiles CameraServiceCapacity MaxPerformance ProcessCapacityMax
+    task_profiles CameraServiceCapacity HighPerformance ProcessCapacityHigh

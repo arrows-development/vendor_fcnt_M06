@@ -8,17 +8,3 @@ service qti_esepowermanager_service_1_1 /vendor/bin/hw/vendor.qti.esepowermanage
     class early_hal
     user system
     group nfc system
-    disabled
-
-on property:ro.boot.boardid=S88019BP1
-    start qti_esepowermanager_service_1_1
-
-on property:ro.boot.boardid=S88029JA1
-    start qti_esepowermanager_service_1_1
-
-on property:ro.boot.boardid=S88029EA1
-    start qti_esepowermanager_service_1_1
-
-on property:ro.boot.boardid=S88018PA1
-    start qti_esepowermanager_service_1_1
-

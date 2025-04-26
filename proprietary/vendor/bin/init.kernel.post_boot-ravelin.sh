@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2020-2022 Qualcomm Technologies, Inc.
+# Copyright (c) 2020-2023 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -34,17 +34,31 @@ ddr_type=`od -An -tx /proc/device-tree/memory/ddr_device_type`
 ddr_type4="07"
 ddr_type5="08"
 
+policy_path="/sys/devices/system/cpu/cpufreq/policy0"
+if [ -e $policy_path ]; then
+	silver_core_nums=$(cat $policy_path/related_cpus | wc -w)
+fi
+goldpolicy_id=$silver_core_nums
+
 # Disable Core control on gold
-echo 0 > /sys/devices/system/cpu/cpu6/core_ctl/enable
+echo 0 > /sys/devices/system/cpu/cpu$goldpolicy_id/core_ctl/enable
 
 # Core control parameters for silver
-echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
-echo 0 0 0 0 1 1 > /sys/devices/system/cpu/cpu0/core_ctl/not_preferred
-echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
-echo 60 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
-echo 40 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
-echo 100 > /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms
-echo 8 > /sys/devices/system/cpu/cpu0/core_ctl/task_thres
+if [ $silver_core_nums -le 4 ]; then
+	echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
+else
+	if [ $silver_core_nums -eq 5 ]; then
+		echo 0 0 0 0 1 > /sys/devices/system/cpu/cpu0/core_ctl/not_preferred
+	elif [ $silver_core_nums -eq 6 ]; then
+		echo 0 0 0 0 1 1 > /sys/devices/system/cpu/cpu0/core_ctl/not_preferred
+	fi
+
+	echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
+	echo 60 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
+	echo 40 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
+	echo 100 > /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms
+	echo 8 > /sys/devices/system/cpu/cpu0/core_ctl/task_thres
+fi
 
 # Setting b.L scheduler parameters
 echo 65 > /proc/sys/walt/sched_downmigrate
@@ -75,18 +89,18 @@ echo 85 > /sys/devices/system/cpu/cpufreq/policy0/walt/hispeed_load
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/pl
 
 # configure governor settings for gold cluster
-echo "walt" > /sys/devices/system/cpu/cpufreq/policy6/scaling_governor
-echo 0 > /sys/devices/system/cpu/cpufreq/policy6/walt/down_rate_limit_us
-echo 0 > /sys/devices/system/cpu/cpufreq/policy6/walt/up_rate_limit_us
-echo 1190000 > /sys/devices/system/cpu/cpufreq/policy6/walt/hispeed_freq
-echo 691200 > /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq
-echo 85 > /sys/devices/system/cpu/cpufreq/policy6/walt/hispeed_load
-echo -6 > /sys/devices/system/cpu/cpufreq/policy6/walt/boost
-echo 0 > /sys/devices/system/cpu/cpufreq/policy6/walt/rtg_boost_freq
-echo 0 > /sys/devices/system/cpu/cpufreq/policy6/walt/pl
+echo "walt" > /sys/devices/system/cpu/cpufreq/policy$goldpolicy_id/scaling_governor
+echo 0 > /sys/devices/system/cpu/cpufreq/policy$goldpolicy_id/walt/down_rate_limit_us
+echo 0 > /sys/devices/system/cpu/cpufreq/policy$goldpolicy_id/walt/up_rate_limit_us
+echo 1190000 > /sys/devices/system/cpu/cpufreq/policy$goldpolicy_id/walt/hispeed_freq
+echo 691200 > /sys/devices/system/cpu/cpufreq/policy$goldpolicy_id/scaling_min_freq
+echo 85 > /sys/devices/system/cpu/cpufreq/policy$goldpolicy_id/walt/hispeed_load
+echo -6 > /sys/devices/system/cpu/cpufreq/policy$goldpolicy_id/walt/boost
+echo 0 > /sys/devices/system/cpu/cpufreq/policy$goldpolicy_id/walt/rtg_boost_freq
+echo 0 > /sys/devices/system/cpu/cpufreq/policy$goldpolicy_id/walt/pl
 
 # configure input boost settings
-echo 1804800 0 0 0 0 0 0 0 > /proc/sys/walt/input_boost/input_boost_freq
+echo 1110000 0 0 0 0 0 0 0 > /proc/sys/walt/input_boost/input_boost_freq
 echo 120 > /proc/sys/walt/input_boost/input_boost_ms
 
 # colocation V3 settings

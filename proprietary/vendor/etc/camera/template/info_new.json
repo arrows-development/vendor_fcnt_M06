@@ -1,0 +1,121 @@
+  {
+    "name": "White",
+    "uuid": "C2547172-B319-449E-B0EE-40CC9328B4B6",
+    "version": 1,
+    "cover": "cover.png",
+    "minSdkVersion": "3.4.0",
+    "supportedAspectRatio": "9v16",
+    "translation": [
+      {
+        "originalText": "White",
+        "targetLanguage": "zh_CN",
+        "targetText": "美颜模板"
+      }
+    ],
+    "effectContent": {
+		
+     
+    "beauty": [
+      {
+        "params": [
+         {
+            "key": "Beauty Effect",
+            "value": true,
+            "type": "boolean"
+         },
+		 {
+			"key": "Default Intensity",
+            "value": 0,
+            "type": "float" 
+		 },
+		 {
+			"key": "Beauty Strength",
+            "value": 0,
+            "type": "float" 
+		 }
+        ]
+      },
+      {
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Advanced Beauty Enable",
+            "value": true,
+            "type": "boolean"
+          },
+          {
+            "key": "Advanced Beauty Type",
+            "value": 0,
+            "type": "int"
+          },
+          {
+            "key": "Advanced Beauty Intensity",
+            "value": 0.85,
+            "type": "float"
+          }
+        ]
+      },
+      {
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Advanced Beauty Face Lut File",
+            "value": "3.mslut",
+            "type": "path"
+          },
+          {
+            "key": "Advanced Beauty Face Lut Intensity",
+            "value": 0.5,
+            "type": "float"
+          }
+        ]
+      }
+    ],
+    "shape": [
+      {
+        "params": [
+         {
+            "key": "Face Mesh Internal Enabled",
+            "value": true,
+            "type": "boolean"
+         }
+        ]
+      },
+	  {
+        "type": "Face Size",
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Face Mesh Face Size Custom Package Id",
+            "value": "383BF935-C597-4F6E-80E7-6B47AAF7A04F",
+            "type": "string"
+          },
+          {
+            "key": "Face Mesh Face Size Degree",
+            "value": 0.185,
+            "type": "float"
+          }
+        ]
+      },
+	  {
+        "type": "Eye Size",
+        "canReplace": 1,
+        "params": [
+          {
+            "key": "Face Mesh Eye Size Custom Package Id",
+            "value": "AAD90D4A-F387-4E9E-B9C5-DA255398CA7E",
+            "type": "string"
+          },
+          {
+            "key": "Face Mesh Eye Size Degree",
+            "value": 0.35,
+            "type": "float"
+          }
+        ]
+      }
+    ]
+    }
+  }
+
+
+

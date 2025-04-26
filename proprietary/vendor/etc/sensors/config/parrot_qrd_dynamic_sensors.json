@@ -1,7 +1,7 @@
 {
   "config":{
     "hw_platform": ["QRD"],
-    "soc_id": ["537", "583", "613"]
+    "soc_id": ["537", "583", "613", "631", "633", "634", "638"]
   },
 
   "sns_dynamic_libraries":

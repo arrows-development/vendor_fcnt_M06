@@ -20,7 +20,7 @@
         <AudioAAC>
             <Name>AAC</Name>
             <Valid>1</Valid>
-            <Channels>6</Channels>
+           <Channels>6</Channels>
             <SamplingFreq>48000</SamplingFreq>
             <Latency>0</Latency>
         </AudioAAC>
@@ -71,8 +71,8 @@
                 <CodecName>H.264</CodecName>
                 <Profile>0</Profile>
                 <Level>6</Level>
-                <HorizontalResolution>4096</HorizontalResolution>
-                <VerticalResolution>2160</VerticalResolution>
+                <HorizontalResolution>1280</HorizontalResolution>
+                <VerticalResolution>720</VerticalResolution>
                 <Latency>0</Latency>
                 <MinimumSliceSize>0</MinimumSliceSize>
                 <SliceEncodingParams>0</SliceEncodingParams>
@@ -86,8 +86,8 @@
                 <CodecName>H.264</CodecName>
                 <Profile>1</Profile>
                 <Level>6</Level>
-                <HorizontalResolution>4096</HorizontalResolution>
-                <VerticalResolution>2160</VerticalResolution>
+                <HorizontalResolution>1280</HorizontalResolution>
+                <VerticalResolution>720</VerticalResolution>
                 <Latency>0</Latency>
                 <MinimumSliceSize>0</MinimumSliceSize>
                 <SliceEncodingParams>0</SliceEncodingParams>
@@ -101,8 +101,8 @@
                 <CodecName>H.265</CodecName>
                 <Profile>0</Profile>
                 <Level>4</Level>
-                <HorizontalResolution>4096</HorizontalResolution>
-                <VerticalResolution>2160</VerticalResolution>
+                <HorizontalResolution>1280</HorizontalResolution>
+                <VerticalResolution>720</VerticalResolution>
                 <Latency>0</Latency>
                 <MinimumSliceSize>0</MinimumSliceSize>
                 <SliceEncodingParams>0</SliceEncodingParams>
@@ -160,12 +160,13 @@
 
         <!--  disable HDCP by default -->
         <ContentProtection>
-            <Valid>0</Valid>
+<!--# add for HDCP Miracast -->
+            <Valid>1</Valid>
             <!--
                 Valid values WFD_HDCP_2_0,
                 WFD_HDCP_2_1 and WFD_HDCP_2_2
             -->
-            <Version>WFD_HDCP_2_2</Version>
+            <Version>WFD_HDCP_2_3</Version>
             <CPPort>6789</CPPort>
             <!--
                 turn on/off audio encryption
@@ -341,8 +342,10 @@
             </BIT4>
           <!-- 1280x720p30  -->
             <BIT5>
-                <MinBitrate>2500000</MinBitrate>
-                <MaxBitrate>10000000</MaxBitrate>
+<!-- FUJITSU 2015.06.03 Miracast Parameter tune start -->
+                <MinBitrate>1000000</MinBitrate>
+                <MaxBitrate>6000000</MaxBitrate>
+<!-- FUJITSU 2015.06.03 Miracast Parameter tune end -->
             </BIT5>
           <!-- 1280x720p60  -->
             <BIT6>
@@ -717,12 +720,16 @@
     <!--
         enable/disable CyclicIntraRefresh
     -->
-    <CyclicIntraRefresh>0</CyclicIntraRefresh>
+<!-- FUJITSU 2015.06.03 Miracast Parameter tune start -->
+    <CyclicIntraRefresh>1</CyclicIntraRefresh>
+<!-- FUJITSU 2015.06.03 Miracast Parameter tune end -->
 
     <!--
         NumberOfMacroBlocks for V4L2_CID_MPEG_VIDEO_CYCLIC_INTRA_REFRESH_MB
     -->
-    <CIRNumberOfMacroBlocks>50</CIRNumberOfMacroBlocks>
+<!-- FUJITSU 2015.06.03 Miracast Parameter tune start -->
+    <CIRNumberOfMacroBlocks>60</CIRNumberOfMacroBlocks>
+<!-- FUJITSU 2015.06.03 Miracast Parameter tune end -->
 
     <!--
         Enable/Disable NALU byte to detect end of AU

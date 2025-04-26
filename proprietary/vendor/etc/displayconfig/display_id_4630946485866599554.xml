@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<displayConfiguration>
+     <highBrightnessMode enabled="true">
+         <transitionPoint>0.858268</transitionPoint>
+         <minimumLux>5500</minimumLux>
+         <timing>
+             <!-- allow for 5 minutes out of every 30 minutes -->
+             <timeWindowSecs>60</timeWindowSecs>
+             <timeMaxSecs>60</timeMaxSecs>
+             <timeMinSecs>0</timeMinSecs>
+         </timing>
+         <allowInLowPowerMode>false</allowInLowPowerMode>
+     </highBrightnessMode>
+     <screenBrightnessRampFastDecrease>0.70472443</screenBrightnessRampFastDecrease>
+     <screenBrightnessRampFastIncrease>0.70472443</screenBrightnessRampFastIncrease>
+     <screenBrightnessRampSlowDecrease>0.23228346</screenBrightnessRampSlowDecrease>
+     <screenBrightnessRampSlowIncrease>0.5</screenBrightnessRampSlowIncrease>
+</displayConfiguration>

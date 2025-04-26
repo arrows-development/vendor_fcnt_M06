@@ -37,11 +37,10 @@ DELETE FROM qcril_emergency_source_mcc_table where MCC = '272' AND NUMBER = '999
 DELETE FROM qcril_emergency_source_mcc_table where MCC = '286' AND NUMBER = '112';
 DELETE FROM qcril_emergency_source_mcc_table where MCC = '302' AND NUMBER = '999';
 DELETE FROM qcril_emergency_source_mcc_table where MCC = '310' AND NUMBER = '999';
-/*HONGMI-181173  lichenyi wt 20230412 France ECC RQ*/
-/*DELETE FROM qcril_emergency_source_mcc_table where MCC = '414' AND NUMBER = '191';
+
+DELETE FROM qcril_emergency_source_mcc_table where MCC = '414' AND NUMBER = '191';
 DELETE FROM qcril_emergency_source_mcc_table where MCC = '414' AND NUMBER = '192';
-DELETE FROM qcril_emergency_source_mcc_table where MCC = '414' AND NUMBER = '199';*/
-/*HONGMI-181173  lichenyi wt 20230412 France ECC RQ*/
+DELETE FROM qcril_emergency_source_mcc_table where MCC = '414' AND NUMBER = '199';
 DELETE FROM qcril_emergency_source_mcc_table where MCC = '515' AND NUMBER = '117';
 DELETE FROM qcril_emergency_source_mcc_table where MCC = '515' AND NUMBER = '192';
 DELETE FROM qcril_emergency_source_mcc_table where MCC = '515' AND NUMBER = '911';
