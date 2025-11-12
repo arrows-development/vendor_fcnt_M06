@@ -12,6 +12,8 @@ PRODUCT_COPY_FILES += \
     vendor/fcnt/M06/proprietary/product/etc/permissions/UimGba.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimGba.xml \
     vendor/fcnt/M06/proprietary/product/etc/permissions/UimGbaManager.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimGbaManager.xml \
     vendor/fcnt/M06/proprietary/product/etc/permissions/UimService.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimService.xml \
+    vendor/fcnt/M06/proprietary/product/etc/permissions/privapp-permissions-google-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-google-product.xml \
+    vendor/fcnt/M06/proprietary/product/etc/permissions/privapp-permissions-oem-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-oem-product.xml \
     vendor/fcnt/M06/proprietary/product/etc/sysconfig/euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/euicc.xml \
     vendor/fcnt/M06/proprietary/system/etc/sysconfig/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
     vendor/fcnt/M06/proprietary/system_ext/etc/dpm/dpm.conf:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/dpm/dpm.conf \
@@ -31,13 +33,22 @@ PRODUCT_COPY_FILES += \
     vendor/fcnt/M06/proprietary/system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_telephony_system_packages_config.xml \
     vendor/fcnt/M06/proprietary/system_ext/etc/sysconfig/qti_whitelist_system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist_system_ext.xml \
     vendor/fcnt/M06/proprietary/system_ext/etc/wfdconfigsink.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/wfdconfigsink.xml \
+    vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/AW88261/acdb_cal_aw88261.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/AW88261/acdb_cal_aw88261.acdb \
+    vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/AW88261/workspaceFileXml_aw88261.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/AW88261/workspaceFileXml_aw88261.qwsp \
+    vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/AW88263/acdb_cal_aw88263.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/AW88263/acdb_cal_aw88263.acdb \
+    vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/AW88263/workspaceFileXml_aw88263.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/AW88263/workspaceFileXml_aw88263.qwsp \
     vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb \
     vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/IDP_UPD/IDP_UPD_workspaceFileXml.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/IDP_UPD/IDP_UPD_workspaceFileXml.qwsp \
     vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.36_enpu2.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.36_enpu2.pmd \
     vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.10.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.10.pmd \
     vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.36_enpu2_comp.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.36_enpu2_comp.pmd \
+    vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.6.3_0.0__3.0.0_0.0__eai_1.43_enpu2.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.6.3_0.0__3.0.0_0.0__eai_1.43_enpu2.pmd \
     vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.7.20_0.0__3.0.0_0.0__eai_1.36_enpu2.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.7.20_0.0__3.0.0_0.0__eai_1.36_enpu2.pmd \
     vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__2.7.2_0.0__3.0.0_0.0__eai_1.36_enpu2.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__2.7.2_0.0__3.0.0_0.0__eai_1.36_enpu2.pmd \
+    vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__4.8.1.11_0.0__3.0.0_0.0__3.1.2_0.0__3.2.0_0.1__eai_1.43_enpuv2.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__4.8.1.11_0.0__3.0.0_0.0__3.1.2_0.0__3.2.0_0.1__eai_1.43_enpuv2.pmd \
+    vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__4.8.13_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.1__eai_1.43_enpu2.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__4.8.13_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.1__eai_1.43_enpu2.pmd \
+    vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__4.8.14_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.1__eai_1.43_enpu2.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__4.8.14_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.1__eai_1.43_enpu2.pmd \
+    vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/nn_ns_models/fai__4.8.4_0.0__3.0.0_0.0__eai_1.43_enpu2.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_ns_models/fai__4.8.4_0.0__3.0.0_0.0__eai_1.43_enpu2.pmd \
     vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.36_enpu2.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.36_enpu2.pmd \
     vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/parrot_idp/IDP_acdb_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/parrot_idp/IDP_acdb_cal.acdb \
     vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/parrot_idp/IDP_workspaceFileXml.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/parrot_idp/IDP_workspaceFileXml.qwsp \
@@ -47,17 +58,12 @@ PRODUCT_COPY_FILES += \
     vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/parrot_qrd/QRD_workspaceFileXml.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/parrot_qrd/QRD_workspaceFileXml.qwsp \
     vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/parrot_qrd_sku1/QRD_parrot_sku1_acdb_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/parrot_qrd_sku1/QRD_parrot_sku1_acdb_cal.acdb \
     vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/parrot_qrd_sku1/QRD_parrot_sku1_workspaceFileXml.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/parrot_qrd_sku1/QRD_parrot_sku1_workspaceFileXml.qwsp \
-    vendor/fcnt/M06/proprietary/vendor/etc/audio/sku_parrot/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_parrot/audio_effects.conf \
-    vendor/fcnt/M06/proprietary/vendor/etc/audio/sku_parrot/mixer_paths_parrot_idp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_parrot/mixer_paths_parrot_idp.xml \
-    vendor/fcnt/M06/proprietary/vendor/etc/audio/sku_parrot/mixer_paths_parrot_idp_sku1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_parrot/mixer_paths_parrot_idp_sku1.xml \
-    vendor/fcnt/M06/proprietary/vendor/etc/audio/sku_parrot/mixer_paths_parrot_qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_parrot/mixer_paths_parrot_qrd.xml \
-    vendor/fcnt/M06/proprietary/vendor/etc/audio/sku_parrot/mixer_paths_parrot_qrd_sku1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_parrot/mixer_paths_parrot_qrd_sku1.xml \
-    vendor/fcnt/M06/proprietary/vendor/etc/audio/sku_parrot/resourcemanager_parrot_idp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_parrot/resourcemanager_parrot_idp.xml \
-    vendor/fcnt/M06/proprietary/vendor/etc/audio/sku_parrot/resourcemanager_parrot_idp_sku1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_parrot/resourcemanager_parrot_idp_sku1.xml \
-    vendor/fcnt/M06/proprietary/vendor/etc/audio/sku_parrot/resourcemanager_parrot_qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_parrot/resourcemanager_parrot_qrd.xml \
-    vendor/fcnt/M06/proprietary/vendor/etc/audio/sku_parrot/resourcemanager_parrot_qrd_sku1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_parrot/resourcemanager_parrot_qrd_sku1.xml \
-    vendor/fcnt/M06/proprietary/vendor/etc/audio/sku_parrot/resourcemanager_upd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_parrot/resourcemanager_upd.xml \
-    vendor/fcnt/M06/proprietary/vendor/etc/backend_conf.xml:$(TARGET_COPY_OUT_VENDOR)/etc/backend_conf.xml \
+    vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/ravelin_idp/IDP_ravelin_acdb_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/ravelin_idp/IDP_ravelin_acdb_cal.acdb \
+    vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/ravelin_idp/IDP_ravelin_workspaceFileXml.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/ravelin_idp/IDP_ravelin_workspaceFileXml.qwsp \
+    vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/ravelin_idp_wsahac/IDP_wsahac_ravelin_acdb_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/ravelin_idp_wsahac/IDP_wsahac_ravelin_acdb_cal.acdb \
+    vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/ravelin_idp_wsahac/IDP_wsahac_ravelin_workspaceFileXml.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/ravelin_idp_wsahac/IDP_wsahac_ravelin_workspaceFileXml.qwsp \
+    vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/ravelin_qrd/QRD_ravelin_acdb_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/ravelin_qrd/QRD_ravelin_acdb_cal.acdb \
+    vendor/fcnt/M06/proprietary/vendor/etc/acdbdata/ravelin_qrd/QRD_ravelin_workspaceFileXml.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/ravelin_qrd/QRD_ravelin_workspaceFileXml.qwsp \
     vendor/fcnt/M06/proprietary/vendor/etc/camera/BSThdr.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/camera/BSThdr.cfg \
     vendor/fcnt/M06/proprietary/vendor/etc/camera/CameraHWConfiguration.config:$(TARGET_COPY_OUT_VENDOR)/etc/camera/CameraHWConfiguration.config \
     vendor/fcnt/M06/proprietary/vendor/etc/camera/SwadCalib.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/SwadCalib.bin \
@@ -70,7 +76,6 @@ PRODUCT_COPY_FILES += \
     vendor/fcnt/M06/proprietary/vendor/etc/camera/template/info_new.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/template/info_new.json \
     vendor/fcnt/M06/proprietary/vendor/etc/camera/vidhance.lic:$(TARGET_COPY_OUT_VENDOR)/etc/camera/vidhance.lic \
     vendor/fcnt/M06/proprietary/vendor/etc/camera/vidhance_calibration:$(TARGET_COPY_OUT_VENDOR)/etc/camera/vidhance_calibration \
-    vendor/fcnt/M06/proprietary/vendor/etc/card-defs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/card-defs.xml \
     vendor/fcnt/M06/proprietary/vendor/etc/cne/mwqem.conf:$(TARGET_COPY_OUT_VENDOR)/etc/cne/mwqem.conf \
     vendor/fcnt/M06/proprietary/vendor/etc/cne/profileMwqem.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/profileMwqem.xml \
     vendor/fcnt/M06/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile1.xml \
@@ -105,7 +110,6 @@ PRODUCT_COPY_FILES += \
     vendor/fcnt/M06/proprietary/vendor/etc/data/dsi_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/dsi_config.xml \
     vendor/fcnt/M06/proprietary/vendor/etc/data/netmgr_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/netmgr_config.xml \
     vendor/fcnt/M06/proprietary/vendor/etc/default-permissions/com.qualcomm.qti.cne.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default-permissions/com.qualcomm.qti.cne.xml \
-    vendor/fcnt/M06/proprietary/vendor/etc/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     vendor/fcnt/M06/proprietary/vendor/etc/display/DPU660.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU660.xml \
     vendor/fcnt/M06/proprietary/vendor/etc/display/DPU670.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU670.xml \
     vendor/fcnt/M06/proprietary/vendor/etc/display/DPU720.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/DPU720.xml \
@@ -140,7 +144,6 @@ PRODUCT_COPY_FILES += \
     vendor/fcnt/M06/proprietary/vendor/etc/dpm_vndr/vendor.dpm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/dpm_vndr/vendor.dpm.conf \
     vendor/fcnt/M06/proprietary/vendor/etc/gpfspath_oem_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gpfspath_oem_config.xml \
     vendor/fcnt/M06/proprietary/vendor/etc/init.qti.fm.sh:$(TARGET_COPY_OUT_VENDOR)/etc/init.qti.fm.sh \
-    vendor/fcnt/M06/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.M06.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint@2.1-service.M06.rc \
     vendor/fcnt/M06/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-qti.rc \
     vendor/fcnt/M06/proprietary/vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc \
     vendor/fcnt/M06/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.widevine.rc \
@@ -153,6 +156,7 @@ PRODUCT_COPY_FILES += \
     vendor/fcnt/M06/proprietary/vendor/etc/init/dataadpl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataadpl.rc \
     vendor/fcnt/M06/proprietary/vendor/etc/init/dataqti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataqti.rc \
     vendor/fcnt/M06/proprietary/vendor/etc/init/dpmQmiMgr.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dpmQmiMgr.rc \
+    vendor/fcnt/M06/proprietary/vendor/etc/init/fingerprint-default.M06.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fingerprint-default.M06.rc \
     vendor/fcnt/M06/proprietary/vendor/etc/init/hw/init.qti.kernel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qti.kernel.rc \
     vendor/fcnt/M06/proprietary/vendor/etc/init/ims_rtp_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ims_rtp_daemon.rc \
     vendor/fcnt/M06/proprietary/vendor/etc/init/imsdaemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsdaemon.rc \
@@ -175,6 +179,7 @@ PRODUCT_COPY_FILES += \
     vendor/fcnt/M06/proprietary/vendor/etc/init/qmipriod.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qmipriod.rc \
     vendor/fcnt/M06/proprietary/vendor/etc/init/qseecomd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qseecomd.rc \
     vendor/fcnt/M06/proprietary/vendor/etc/init/ssgtzd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ssgtzd.rc \
+    vendor/fcnt/M06/proprietary/vendor/etc/init/trusteduilistener.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/trusteduilistener.rc \
     vendor/fcnt/M06/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
     vendor/fcnt/M06/proprietary/vendor/etc/init/vendor.dpmd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dpmd.rc \
     vendor/fcnt/M06/proprietary/vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-guestos-service.rc \
@@ -187,8 +192,12 @@ PRODUCT_COPY_FILES += \
     vendor/fcnt/M06/proprietary/vendor/etc/init/vendor.qti.hardware.limits-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.limits-service.rc \
     vendor/fcnt/M06/proprietary/vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc \
     vendor/fcnt/M06/proprietary/vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc \
+    vendor/fcnt/M06/proprietary/vendor/etc/init/vendor.qti.hardware.secureprocessor@1.0.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.secureprocessor@1.0.rc \
     vendor/fcnt/M06/proprietary/vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc \
+    vendor/fcnt/M06/proprietary/vendor/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc \
     vendor/fcnt/M06/proprietary/vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.soter@1.0-service.rc \
+    vendor/fcnt/M06/proprietary/vendor/etc/init/vendor.qti.hardware.trustedui@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.trustedui@1.0-service-qti.rc \
+    vendor/fcnt/M06/proprietary/vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc \
     vendor/fcnt/M06/proprietary/vendor/etc/init/vendor.qti.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.media.c2@1.0-service.rc \
     vendor/fcnt/M06/proprietary/vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.media.c2audio@1.0-service.rc \
     vendor/fcnt/M06/proprietary/vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.qspmhal@1.0-service.rc \
@@ -220,12 +229,12 @@ PRODUCT_COPY_FILES += \
     vendor/fcnt/M06/proprietary/vendor/etc/media_profiles_parrot_v0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_parrot_v0.xml \
     vendor/fcnt/M06/proprietary/vendor/etc/media_profiles_parrot_v1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_parrot_v1.xml \
     vendor/fcnt/M06/proprietary/vendor/etc/media_profiles_parrot_v2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_parrot_v2.xml \
-    vendor/fcnt/M06/proprietary/vendor/etc/microphone_characteristics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/microphone_characteristics.xml \
     vendor/fcnt/M06/proprietary/vendor/etc/models/acd/event.eai:$(TARGET_COPY_OUT_VENDOR)/etc/models/acd/event.eai \
     vendor/fcnt/M06/proprietary/vendor/etc/models/acd/music.eai:$(TARGET_COPY_OUT_VENDOR)/etc/models/acd/music.eai \
     vendor/fcnt/M06/proprietary/vendor/etc/models/acd/speech.eai:$(TARGET_COPY_OUT_VENDOR)/etc/models/acd/speech.eai \
     vendor/fcnt/M06/proprietary/vendor/etc/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
     vendor/fcnt/M06/proprietary/vendor/etc/permissions/noRil/apq_excluded_telephony_features.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/noRil/apq_excluded_telephony_features.xml \
+    vendor/fcnt/M06/proprietary/vendor/etc/permissions/qti_fingerprint_interface.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/qti_fingerprint_interface.xml \
     vendor/fcnt/M06/proprietary/vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml \
     vendor/fcnt/M06/proprietary/vendor/etc/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
     vendor/fcnt/M06/proprietary/vendor/etc/qcril_database/qcrilNr.db:$(TARGET_COPY_OUT_VENDOR)/etc/qcril_database/qcrilNr.db \
@@ -367,7 +376,6 @@ PRODUCT_COPY_FILES += \
     vendor/fcnt/M06/proprietary/vendor/etc/ssg/tz_whitelist.json:$(TARGET_COPY_OUT_VENDOR)/etc/ssg/tz_whitelist.json \
     vendor/fcnt/M06/proprietary/vendor/etc/telephony_packages.xml:$(TARGET_COPY_OUT_VENDOR)/etc/telephony_packages.xml \
     vendor/fcnt/M06/proprietary/vendor/etc/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
-    vendor/fcnt/M06/proprietary/vendor/etc/usecaseKvManager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usecaseKvManager.xml \
     vendor/fcnt/M06/proprietary/vendor/etc/vmmgr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/vmmgr.conf \
     vendor/fcnt/M06/proprietary/vendor/etc/wfdconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wfdconfig.xml \
     vendor/fcnt/M06/proprietary/vendor/etc/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
@@ -426,6 +434,7 @@ PRODUCT_COPY_FILES += \
     vendor/fcnt/M06/proprietary/vendor/firmware/a730_zap.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/a730_zap.elf \
     vendor/fcnt/M06/proprietary/vendor/firmware/a730_zap.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/a730_zap.mbn \
     vendor/fcnt/M06/proprietary/vendor/firmware/a730_zap.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/a730_zap.mdt \
+    vendor/fcnt/M06/proprietary/vendor/firmware/aw86006.prog:$(TARGET_COPY_OUT_VENDOR)/firmware/aw86006.prog \
     vendor/fcnt/M06/proprietary/vendor/firmware/aw88261_acf.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aw88261_acf.bin \
     vendor/fcnt/M06/proprietary/vendor/firmware/aw88263_acf.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aw88263_acf.bin \
     vendor/fcnt/M06/proprietary/vendor/firmware/evass-lt-21.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt-21.b00 \
@@ -518,9 +527,12 @@ PRODUCT_COPY_FILES += \
     vendor/fcnt/M06/proprietary/vendor/lib64/libfmpal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfmpal.so \
     vendor/fcnt/M06/proprietary/vendor/lib64/liblx-ar_util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblx-ar_util.so \
     vendor/fcnt/M06/proprietary/vendor/lib64/liblx-osal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblx-osal.so \
+    vendor/fcnt/M06/proprietary/vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.pal@1.0-impl.so \
     vendor/fcnt/M06/proprietary/vendor/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/libnfc-nxp_RF.conf
 
 PRODUCT_PACKAGES += \
+    vendor.qti.diaghal-V1-ndk \
+    vendor.qti.hardware.fm-V1-ndk \
     eglSubDriverAndroid \
     libEGL_adreno \
     libGLESv1_CM_adreno \
@@ -528,6 +540,7 @@ PRODUCT_PACKAGES += \
     libVkLayer_ADRENO_qprofiler \
     libq3dtools_adreno \
     libq3dtools_esx \
+    vendor.qti.hardware.servicetracker@1.2-impl \
     vulkan.adreno \
     libCB \
     libOpenCL \
@@ -541,8 +554,6 @@ PRODUCT_PACKAGES += \
     libllvm-qcom \
     libllvm-qgl \
     vendor.qti.qspmhal@1.0 \
-    android.hardware.biometrics.common-V1-ndk_platform \
-    android.hardware.biometrics.fingerprint-V1-ndk_platform \
     android.hardware.secure_element@1.0-impl \
     btaudio_offload_if \
     camera.device@1.0-impl \
@@ -688,11 +699,16 @@ PRODUCT_PACKAGES += \
     com.qti.settings.clarence \
     com.qti.settings.netrani \
     com.qti.stats.common \
+    com.qualcomm.mcx.distortionmapper \
+    com.qualcomm.mcx.linearmapper \
+    com.qualcomm.mcx.policy.mfl \
+    com.qualcomm.mcx.policy.xr \
     com.qualcomm.qti.dpm.api@1.0_vendor \
     com.qualcomm.qti.imscmservice@1.0 \
     com.qualcomm.qti.imscmservice@2.0 \
     com.qualcomm.qti.imscmservice@2.1 \
     com.qualcomm.qti.imscmservice@2.2 \
+    com.qualcomm.qti.mcx.usecase.extension \
     com.qualcomm.qti.uceservice@2.0 \
     com.qualcomm.qti.uceservice@2.1 \
     com.qualcomm.qti.uceservice@2.2 \
@@ -747,9 +763,17 @@ PRODUCT_PACKAGES += \
     libQnnHtp \
     libQnnHtpV73Stub \
     libQtiRilLoadable \
+    libTouchInputVM \
+    libTrustedInput \
+    libTrustedInputTZ \
+    libTrustedInputUtils \
+    libTrustedUI \
+    libTrustedUITZ \
+    libTrustedUIVM \
     libadm \
     libadsp_default_listener \
     libadsprpc \
+    libagmmixer \
     libarcsoft_faceid \
     libarcsoft_multiframe_bokeh_image \
     libarcsoft_multiframe_bokeh_video \
@@ -759,6 +783,7 @@ PRODUCT_PACKAGES += \
     libarcsoft_super_night_raw \
     libaudio_log_utils \
     libbacklight-calib \
+    libbase64 \
     libbitmlenginev2 \
     libbluetooth_audio_session_qti \
     libbluetooth_audio_session_qti_2_1 \
@@ -816,6 +841,7 @@ PRODUCT_PACKAGES += \
     libdrmutils \
     libdsi_netctrl \
     libdsutils \
+    libeepromcutter \
     libesepmconfig \
     libesesbprovision \
     libeva \
@@ -841,6 +867,7 @@ PRODUCT_PACKAGES += \
     libkeymasterprovision \
     libkeymasterutils \
     liblbs_core \
+    liblistensoundmodel2vendor \
     libloc_api_v02 \
     libloc_api_wds \
     libloc_base_util \
@@ -967,6 +994,7 @@ PRODUCT_PACKAGES += \
     librcc \
     librcmask \
     libremosaic_wrapper \
+    libremosaiclib \
     libril-db \
     libril-legacy \
     libril-qc-ltedirectdisc \
@@ -983,10 +1011,12 @@ PRODUCT_PACKAGES += \
     libsdm-disp-vndapis \
     libsdmextension \
     libsdsprpc \
+    libsecureui_svcsock \
     libsensorcal \
     libsensorslog \
     libshsc \
     libshsusr_verinfo \
+    libsi \
     libsn220u_fw \
     libsnapdragoncolor-manager \
     libsnapdragoncolor-qdcm \
@@ -1015,6 +1045,8 @@ PRODUCT_PACKAGES += \
     libtime_genoff \
     libtinyxml2_1 \
     libtrustedapploader \
+    libtzdrmgenprov \
+    libubifocus \
     libvideotxr \
     libvideoutils \
     libvidhance \
@@ -1096,6 +1128,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.gnss-V3-ndk \
     vendor.qti.gnss-V5-ndk \
     vendor.qti.gnss-service \
+    vendor.qti.hardware.ListenSoundModel@1.0-impl \
+    vendor.qti.hardware.ListenSoundModel@1.0 \
     vendor.qti.hardware.alarm@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.1 \
@@ -1122,6 +1156,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.dpmservice@1.0_vendor \
     vendor.qti.hardware.dpmservice@1.1_vendor \
     vendor.qti.hardware.dsp@1.0 \
+    vendor.qti.hardware.fingerprint@1.0 \
     vendor.qti.hardware.fm@1.0_vendor \
     vendor.qti.hardware.limits@1.0 \
     vendor.qti.hardware.limits@1.1 \
@@ -1166,10 +1201,18 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.radio.uim_remote_client@1.1 \
     vendor.qti.hardware.radio.uim_remote_client@1.2 \
     vendor.qti.hardware.radio.uim_remote_server@1.0 \
+    vendor.qti.hardware.secureprocessor.common@1.0-helper \
+    vendor.qti.hardware.secureprocessor.common@1.0 \
+    vendor.qti.hardware.secureprocessor.config@1.0 \
+    vendor.qti.hardware.secureprocessor.device@1.0 \
     vendor.qti.hardware.sensorscalibrate@1.0 \
     vendor.qti.hardware.sigma_miracast@1.0 \
     vendor.qti.hardware.slmadapter@1.0 \
     vendor.qti.hardware.soter@1.0 \
+    vendor.qti.hardware.trustedui@1.0 \
+    vendor.qti.hardware.trustedui@1.1 \
+    vendor.qti.hardware.trustedui@1.2 \
+    vendor.qti.hardware.tui_comm@1.0 \
     vendor.qti.hardware.vpp@1.1 \
     vendor.qti.hardware.vpp@1.2 \
     vendor.qti.hardware.vpp@1.3 \
@@ -1281,9 +1324,12 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.qccsyshal@1.2 \
     vendor.qti.hardware.qccvndhal@1.0 \
     vendor.qti.hardware.wifidisplaysession@1.0 \
+    vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk \
     vendor.qti.imsrtpservice@3.0 \
     vendor.qti.imsrtpservice@3.1 \
     vendor.qti.qccvndhal_aidl-V1-ndk \
+    vendor.qti.qspmhal-V1-ndk \
+    libledpulsehal \
     CACertService \
     CneApp \
     IWlanService \
@@ -1291,7 +1337,8 @@ PRODUCT_PACKAGES += \
     TrustZoneAccessService \
     MobileFeliCaClient \
     uimgbaservice \
-    EuiccGoogle \
+    EuiccGoogle_arm64 \
+    FjHealthcareApp \
     ImsRcsService \
     PowerOffAlarm \
     QCC \
@@ -1340,12 +1387,15 @@ PRODUCT_PACKAGES += \
     c2_manifest_vendor.xml \
     c2_manifest_vendor_audio.xml \
     dataconnection-saidl.xml \
+    fingerprint-default.M06.xml \
     manifest_android.hardware.drm@1.4-service.widevine.xml \
     qtiradio-saidl.xml \
     vendor.qti.diag.hal.service.xml \
     vendor.qti.gnss-service.xml \
     vendor.qti.hardware.limits-service.xml \
     vendor.qti.hardware.radio.ims.xml \
+    vendor.qti.hardware.servicetracker@1.2-service.xml \
+    charger \
     ATFWD-daemon \
     adpl \
     adsprpcd \
@@ -1356,7 +1406,8 @@ PRODUCT_PACKAGES += \
     dpmQmiMgr \
     dspservice \
     edgnss-daemon \
-    android.hardware.biometrics.fingerprint@2.1-service.M06 \
+    f2player \
+    android.hardware.biometrics.fingerprint-service.example.M06 \
     android.hardware.bluetooth@1.0-service-qti \
     android.hardware.drm@1.4-service.widevine \
     android.hardware.gatekeeper@1.0-service-qti \
@@ -1371,8 +1422,12 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.limits@1.1-service \
     vendor.qti.hardware.qseecom@1.0-service \
     vendor.qti.hardware.qteeconnector@1.0-service \
+    vendor.qti.hardware.secureprocessor@1.0 \
     vendor.qti.hardware.sensorscalibrate@1.0-service \
+    vendor.qti.hardware.servicetracker@1.2-service \
     vendor.qti.hardware.soter@1.0-service \
+    vendor.qti.hardware.trustedui@1.0-service-qti \
+    vendor.qti.hardware.tui_comm@1.0-service-qti \
     vendor.qti.media.c2@1.0-service \
     vendor.qti.media.c2audio@1.0-service \
     vendor.qti.secure_element@1.2-service \
@@ -1422,6 +1477,7 @@ PRODUCT_PACKAGES += \
     tftp_server \
     thermal-engine-v2 \
     time_daemon \
+    trusteduilistener \
     vendor.dpmd \
     vendor.qti.hardware.soter@1.0-provision \
     vendor.qti.qspmhal@1.0-service \

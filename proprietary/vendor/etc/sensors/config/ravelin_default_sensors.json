@@ -1,7 +1,7 @@
 {
     "config":{
         "hw_platform": ["MTP", "Surf", "RCM", "QRD", "HDK", "IDP"],
-        "soc_id": ["568", "581", "582", "602"]
+        "soc_id": ["568", "581", "582", "602", "653", "654"]
     },
 
     "default_sensors": {

@@ -1,0 +1,2 @@
+proprietary/product/priv-app/FjHealthcareApp/FjHealthcareApp.apk filter=lfs diff=lfs merge=lfs -text
+radio/modem.img filter=lfs diff=lfs merge=lfs -text

@@ -3,3 +3,4 @@
 <permissions>
 <feature name="android.hardware.telephony.euicc" />
 </permissions>
+

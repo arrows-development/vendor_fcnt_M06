@@ -2,7 +2,7 @@
 #==============================================================================
 #       init.qti.media.sh
 #
-# Copyright (c) 2020-2023, Qualcomm Technologies, Inc.
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -57,9 +57,9 @@ case "$target" in
         esac
         ;;
     "parrot")
-        setprop vendor.mm.target.enable.qcom_parser 1040463
+        setprop vendor.mm.target.enable.qcom_parser 958543
         case "$soc_hwid" in
-            568|602|581|582)
+            568|602|581|582|653|654)
                 setprop vendor.media.target_variant "_ravelin"
                 if [ $build_codename -le "14" ]; then
                     setprop vendor.netflix.bsp_rev "Q4450-37037-1"
@@ -147,6 +147,15 @@ case "$target" in
                     setprop vendor.netflix.bsp_rev "Q6115-31409-1"
                 fi
                 ;;
+            417|444)
+                setprop vendor.media.target_variant "_bengal_v1"
+                if [ $build_codename -le "14" ]; then
+                    setprop vendor.netflix.bsp_rev "Q6115-31409-1"
+                fi
+                ;;
+            441|473|474)
+               setprop vendor.media.target_variant "_scuba_v1"
+               ;;
         esac
         ;;
     "holi")
