@@ -11740,7 +11740,6 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libgrpc++_unsecure_prebuilt.so",
             ],
             shared_libs: [
-                "libz",
                 "liblog",
                 "libc++",
                 "libc",
@@ -20305,7 +20304,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.gnss-V3-ndk",
+    name: "vendor.qti.gnss-V3-ndk_platform",
     owner: "fcnt",
     strip: {
         none: true,
@@ -20313,7 +20312,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/vendor.qti.gnss-V3-ndk.so",
+                "proprietary/vendor/lib64/vendor.qti.gnss-V3-ndk_platform.so",
             ],
             shared_libs: [
                 "libbinder_ndk",
@@ -20330,7 +20329,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.gnss-V5-ndk",
+    name: "vendor.qti.gnss-V5-ndk_platform",
     owner: "fcnt",
     strip: {
         none: true,
@@ -20338,7 +20337,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/vendor.qti.gnss-V5-ndk.so",
+                "proprietary/vendor/lib64/vendor.qti.gnss-V5-ndk_platform.so",
             ],
             shared_libs: [
                 "libbinder_ndk",
@@ -20368,7 +20367,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libbase",
                 "libbinder_ndk",
-                "vendor.qti.gnss-V5-ndk",
+                "vendor.qti.gnss-V5-ndk_platform",
                 "liblog",
                 "libcutils",
                 "libutils",
@@ -24700,6 +24699,7 @@ cc_prebuilt_library_shared {
                 "vendor.qti.hardware.qccsyshal@1.2",
                 "android.hardware.common-V2-ndk",
                 "vendor.qti.qccvndhal_aidl-V1-ndk",
+                "vendor.qti.qccsyshal_aidl-V1-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -24765,6 +24765,7 @@ cc_prebuilt_library_shared {
                 "vendor.qti.hardware.qccsyshal@1.2",
                 "android.hardware.common-V2-ndk",
                 "vendor.qti.qccvndhal_aidl-V1-ndk",
+                "vendor.qti.qccsyshal_aidl-V1-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -24803,6 +24804,7 @@ cc_prebuilt_library_shared {
                 "vendor.qti.hardware.qccsyshal@1.2",
                 "android.hardware.common-V2-ndk",
                 "vendor.qti.qccvndhal_aidl-V1-ndk",
+                "vendor.qti.qccsyshal_aidl-V1-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -25845,6 +25847,67 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.qccsyshal_aidl-V1-ndk",
+    owner: "fcnt",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/vendor.qti.qccsyshal_aidl-V1-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "android.hardware.common-V2-ndk",
+                "android.hardware.common.fmq-V1-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.qccsyshal_aidl-halimpl",
+    owner: "fcnt",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/vendor.qti.qccsyshal_aidl-halimpl.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libfmq",
+                "libqcc_file_agent_sys",
+                "libcutils",
+                "liblog",
+                "libz",
+                "libbase",
+                "libbinder",
+                "libbinder_ndk",
+                "vendor.qti.qccsyshal_aidl-V1-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.qccvndhal_aidl-V1-ndk",
     owner: "fcnt",
     strip: {
@@ -26078,6 +26141,18 @@ android_app_import {
 }
 
 android_app_import {
+    name: "QtiTelephony",
+    owner: "fcnt",
+    apk: "proprietary/system_ext/priv-app/QtiTelephony/QtiTelephony.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    system_ext_specific: true,
+}
+
+android_app_import {
     name: "WfdService",
     owner: "fcnt",
     apk: "proprietary/system_ext/priv-app/WfdService/WfdService.apk",
@@ -26093,6 +26168,18 @@ android_app_import {
     name: "dpmserviceapp",
     owner: "fcnt",
     apk: "proprietary/system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    system_ext_specific: true,
+}
+
+android_app_import {
+    name: "ims",
+    owner: "fcnt",
+    apk: "proprietary/system_ext/priv-app/ims/ims.apk",
     certificate: "platform",
     dex_preopt: {
         enabled: false,
@@ -29378,6 +29465,7 @@ cc_prebuilt_binary {
                 "libutils",
                 "libfmq",
                 "libbinder",
+                "libcutils",
                 "liblog",
                 "vendor.qti.hardware.qccsyshal@1.2-halimpl",
                 "vendor.qti.hardware.qccsyshal@1.2",
