@@ -9418,32 +9418,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libagmmixer",
-    owner: "fcnt",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libagmmixer.so",
-            ],
-            shared_libs: [
-                "libtinyalsa",
-                "libexpat",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libarcsoft_faceid",
     owner: "fcnt",
     strip: {
@@ -26088,7 +26062,8 @@ android_app_import {
     name: "FjHealthcareApp",
     owner: "fcnt",
     apk: "proprietary/product/priv-app/FjHealthcareApp/FjHealthcareApp.apk",
-    certificate: "platform",
+    preprocessed: true,
+    presigned: true,
     dex_preopt: {
         enabled: false,
     },
@@ -26362,6 +26337,15 @@ dex_import {
 }
 
 dex_import {
+    name: "vendor.qti.ims.datachannelservice-V2-java",
+    owner: "fcnt",
+    jars: [
+        "proprietary/system_ext/framework/vendor.qti.ims.datachannelservice-V2-java.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
     name: "vendor.qti.ims.factory-V1.0-java",
     owner: "fcnt",
     jars: [
@@ -26411,6 +26395,15 @@ dex_import {
     owner: "fcnt",
     jars: [
         "proprietary/system_ext/framework/vendor.qti.ims.factoryaidlservice-V1-java.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "vendor.qti.ims.imscmaidlservice-V1-java",
+    owner: "fcnt",
+    jars: [
+        "proprietary/system_ext/framework/vendor.qti.ims.imscmaidlservice-V1-java.jar",
     ],
     system_ext_specific: true,
 }
@@ -26519,6 +26512,24 @@ dex_import {
     owner: "fcnt",
     jars: [
         "proprietary/system_ext/framework/vendor.qti.ims.rcsuceaidlservice-V1-java.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "vendor.qti.ims.uceaidlservice-V1-java",
+    owner: "fcnt",
+    jars: [
+        "proprietary/system_ext/framework/vendor.qti.ims.uceaidlservice-V1-java.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "vendor.qti.imsdatachannel",
+    owner: "fcnt",
+    jars: [
+        "proprietary/system_ext/framework/vendor.qti.imsdatachannel.jar",
     ],
     system_ext_specific: true,
 }
