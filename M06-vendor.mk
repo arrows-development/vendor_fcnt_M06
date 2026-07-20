@@ -519,15 +519,6 @@ PRODUCT_COPY_FILES += \
     vendor/fcnt/M06/proprietary/vendor/lib64/camera/fdconfigpreviewlite.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigpreviewlite.bin \
     vendor/fcnt/M06/proprietary/vendor/lib64/camera/fdconfigvideo.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigvideo.bin \
     vendor/fcnt/M06/proprietary/vendor/lib64/camera/fdconfigvideolite.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigvideolite.bin \
-    vendor/fcnt/M06/proprietary/vendor/lib64/libar-acdb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libar-acdb.so \
-    vendor/fcnt/M06/proprietary/vendor/lib64/libar-gpr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libar-gpr.so \
-    vendor/fcnt/M06/proprietary/vendor/lib64/libar-gsl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libar-gsl.so \
-    vendor/fcnt/M06/proprietary/vendor/lib64/libar-pal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libar-pal.so \
-    vendor/fcnt/M06/proprietary/vendor/lib64/libats.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libats.so \
-    vendor/fcnt/M06/proprietary/vendor/lib64/libfmpal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfmpal.so \
-    vendor/fcnt/M06/proprietary/vendor/lib64/liblx-ar_util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblx-ar_util.so \
-    vendor/fcnt/M06/proprietary/vendor/lib64/liblx-osal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblx-osal.so \
-    vendor/fcnt/M06/proprietary/vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.pal@1.0-impl.so \
     vendor/fcnt/M06/proprietary/vendor/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/libnfc-nxp_RF.conf
 
 PRODUCT_PACKAGES += \
@@ -773,6 +764,9 @@ PRODUCT_PACKAGES += \
     libadm \
     libadsp_default_listener \
     libadsprpc \
+    libagm \
+    libagmmixer \
+    libar-pal \
     libarcsoft_faceid \
     libarcsoft_multiframe_bokeh_image \
     libarcsoft_multiframe_bokeh_video \
@@ -840,12 +834,15 @@ PRODUCT_PACKAGES += \
     libdrmutils \
     libdsi_netctrl \
     libdsutils \
+    libeai_fixed \
+    libeai_float \
     libeepromcutter \
     libesepmconfig \
     libesesbprovision \
     libeva \
     libfastcvdsp_stub \
     libfastcvopt \
+    libfmpal \
     libgame_enhance \
     libgnsspps \
     libgralloc.qti \
@@ -1127,8 +1124,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.gnss-V3-ndk_platform \
     vendor.qti.gnss-V5-ndk_platform \
     vendor.qti.gnss-service \
-    vendor.qti.hardware.ListenSoundModel@1.0-impl \
-    vendor.qti.hardware.ListenSoundModel@1.0 \
     vendor.qti.hardware.alarm@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.1 \
@@ -1160,6 +1155,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.limits@1.0 \
     vendor.qti.hardware.limits@1.1 \
     vendor.qti.hardware.mwqemadapter@1.0 \
+    vendor.qti.hardware.pal@1.0-impl \
     vendor.qti.hardware.qccsyshal@1.0_vendor \
     vendor.qti.hardware.qccsyshal@1.1_vendor \
     vendor.qti.hardware.qccvndhal@1.0-halimpl \
@@ -1243,34 +1239,34 @@ PRODUCT_PACKAGES += \
     vendor.qti.latency@2.0 \
     vendor.qti.latency@2.1 \
     vendor.qti.qspmhal@1.0-impl \
-    bm2n31 \
-    bm2n32 \
-    bm2n33 \
-    bm2n34 \
-    bm2n35 \
-    bm2n36 \
-    bm2n37 \
-    bm2n54 \
-    bm2n55 \
-    bm2n56 \
-    libQnnHtpV73 \
-    libQnnHtpV73Skel \
-    libadsp_jpege_skel \
-    libapn_dsp_skel \
-    libarc_htp_driver_skel \
-    libbitml_nsp_skel \
-    libbitml_nsp_v2_skel \
-    libcamera_nn_skel \
-    libdspCV_skel \
-    libdsp_streamer_binning \
-    libfastcvadsp \
-    libfastcvdsp_skel \
-    libhdr_skel \
-    libhme_dsp_skel \
-    libmctfengine_skel \
-    libscveT2T_skel \
-    libsw2dlut_dsp_skel \
-    nlc \
+    vendor_lib_rfsa_adsp_bm2n31_bin \
+    vendor_lib_rfsa_adsp_bm2n32_bin \
+    vendor_lib_rfsa_adsp_bm2n33_bin \
+    vendor_lib_rfsa_adsp_bm2n34_bin \
+    vendor_lib_rfsa_adsp_bm2n35_bin \
+    vendor_lib_rfsa_adsp_bm2n36_bin \
+    vendor_lib_rfsa_adsp_bm2n37_bin \
+    vendor_lib_rfsa_adsp_bm2n54_bin \
+    vendor_lib_rfsa_adsp_bm2n55_bin \
+    vendor_lib_rfsa_adsp_bm2n56_bin \
+    vendor_lib_rfsa_adsp_libQnnHtpV73_so \
+    vendor_lib_rfsa_adsp_libQnnHtpV73Skel_so \
+    vendor_lib_rfsa_adsp_libadsp_jpege_skel_so \
+    vendor_lib_rfsa_adsp_libapn_dsp_skel_so \
+    vendor_lib_rfsa_adsp_libarc_htp_driver_skel_so \
+    vendor_lib_rfsa_adsp_libbitml_nsp_skel_so \
+    vendor_lib_rfsa_adsp_libbitml_nsp_v2_skel_so \
+    vendor_lib_rfsa_adsp_libcamera_nn_skel_so \
+    vendor_lib_rfsa_adsp_libdspCV_skel_so \
+    vendor_lib_rfsa_adsp_libdsp_streamer_binning_so \
+    vendor_lib_rfsa_adsp_libfastcvadsp_so \
+    vendor_lib_rfsa_adsp_libfastcvdsp_skel_so \
+    vendor_lib_rfsa_adsp_libhdr_skel_so \
+    vendor_lib_rfsa_adsp_libhme_dsp_skel_so \
+    vendor_lib_rfsa_adsp_libmctfengine_skel_so \
+    vendor_lib_rfsa_adsp_libscveT2T_skel_so \
+    vendor_lib_rfsa_adsp_libsw2dlut_dsp_skel_so \
+    vendor_lib_rfsa_adsp_nlc_so \
     com.qualcomm.qti.dpm.api@1.0 \
     fm_helium \
     lib-imsvideocodec \

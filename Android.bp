@@ -4855,7 +4855,7 @@ cc_prebuilt_library_shared {
                 "camx.device@3.3-impl",
                 "libjpeg",
                 "libsync",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "libutils",
                 "libyuv",
                 "android.hardware.graphics.mapper@2.0",
@@ -4946,7 +4946,7 @@ cc_prebuilt_library_shared {
                 "libjpeg",
                 "liblog",
                 "libsync",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "libutils",
                 "libyuv",
                 "android.hardware.graphics.mapper@2.0",
@@ -5040,7 +5040,7 @@ cc_prebuilt_library_shared {
                 "libjpeg",
                 "liblog",
                 "libsync",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "libutils",
                 "libyuv",
                 "android.hardware.graphics.mapper@2.0",
@@ -5190,7 +5190,7 @@ cc_prebuilt_library_shared {
                 "camx.device@3.4-impl",
                 "camx.device@3.5-impl",
                 "camx.device@3.6-impl",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "android.hardware.graphics.mapper@2.0",
                 "android.hardware.graphics.mapper@3.0",
                 "android.hardware.graphics.mapper@4.0",
@@ -5246,7 +5246,7 @@ cc_prebuilt_library_shared {
                 "camx.device@3.4-impl",
                 "camx.device@3.5-impl",
                 "camx.device@3.6-impl",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "android.hardware.graphics.mapper@2.0",
                 "android.hardware.graphics.mapper@3.0",
                 "android.hardware.graphics.mapper@4.0",
@@ -5300,7 +5300,7 @@ cc_prebuilt_library_shared {
                 "camx.device@3.4-impl",
                 "camx.device@3.5-impl",
                 "camx.device@3.6-impl",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "android.hardware.graphics.mapper@2.0",
                 "android.hardware.graphics.mapper@3.0",
                 "android.hardware.graphics.mapper@4.0",
@@ -5360,7 +5360,7 @@ cc_prebuilt_library_shared {
                 "camx.device@3.4-impl",
                 "camx.device@3.5-impl",
                 "camx.device@3.6-impl",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "android.hardware.graphics.mapper@2.0",
                 "android.hardware.graphics.mapper@3.0",
                 "android.hardware.graphics.mapper@4.0",
@@ -5416,7 +5416,7 @@ cc_prebuilt_library_shared {
                 "camx.device@3.4-impl",
                 "camx.device@3.5-impl",
                 "camx.device@3.6-impl",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "android.hardware.graphics.mapper@2.0",
                 "android.hardware.graphics.mapper@3.0",
                 "android.hardware.graphics.mapper@4.0",
@@ -5474,7 +5474,7 @@ cc_prebuilt_library_shared {
                 "camx.device@3.4-impl",
                 "camx.device@3.5-impl",
                 "camx.device@3.6-impl",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "android.hardware.graphics.mapper@2.0",
                 "android.hardware.graphics.mapper@3.0",
                 "android.hardware.graphics.mapper@4.0",
@@ -5534,7 +5534,7 @@ cc_prebuilt_library_shared {
                 "camx.device@3.4-impl",
                 "camx.device@3.5-impl",
                 "camx.device@3.6-impl",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "android.hardware.graphics.mapper@2.0",
                 "android.hardware.graphics.mapper@3.0",
                 "android.hardware.graphics.mapper@4.0",
@@ -9418,6 +9418,93 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libagm",
+    owner: "fcnt",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libagm.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libaudioroute",
+                "libtinyalsa",
+                "libaudio_log_utils",
+                "libexpat",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libagmmixer",
+    owner: "fcnt",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libagmmixer.so",
+            ],
+            shared_libs: [
+                "libtinyalsa",
+                "libexpat",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libar-pal",
+    owner: "fcnt",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libar-pal.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libexpat",
+                "libaudioroute",
+                "libcutils",
+                "libtinyalsa",
+                "libtinycompress",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libarcsoft_faceid",
     owner: "fcnt",
     strip: {
@@ -11272,7 +11359,7 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libbinder",
                 "libdrm",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "libdisplaydebug",
                 "libhidlbase",
                 "android.frameworks.sensorservice@1.0",
@@ -11433,6 +11520,54 @@ cc_prebuilt_library_shared {
                 "libmdmdetect",
                 "libnetutils",
                 "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libeai_fixed",
+    owner: "fcnt",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libeai_fixed.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libeai_float",
+    owner: "fcnt",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libeai_float.so",
+            ],
+            shared_libs: [
+                "liblog",
                 "libc",
                 "libm",
                 "libdl",
@@ -11609,6 +11744,36 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libfmpal",
+    owner: "fcnt",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libfmpal.so",
+            ],
+            shared_libs: [
+                "libaudioroute",
+                "libaudioutils",
+                "libcutils",
+                "libexpat",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -16991,7 +17156,7 @@ cc_prebuilt_library_shared {
                 "libdisplaydebug",
                 "libsdm-color",
                 "libbinder",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "libsdmutils",
                 "libdrm",
                 "libdigital-dimming",
@@ -20368,70 +20533,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.ListenSoundModel@1.0-impl",
-    owner: "fcnt",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "libhidltransport",
-                "libutils",
-                "liblog",
-                "libcutils",
-                "libhardware",
-                "libbase",
-                "libhidlmemory",
-                "android.hidl.allocator@1.0",
-                "android.hidl.memory@1.0",
-                "vendor.qti.hardware.ListenSoundModel@1.0",
-                "liblistensoundmodel2vendor",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.ListenSoundModel@1.0",
-    owner: "fcnt",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.alarm@1.0",
     owner: "fcnt",
     strip: {
@@ -21335,6 +21436,38 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.pal@1.0-impl",
+    owner: "fcnt",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "libhidltransport",
+                "libutils",
+                "liblog",
+                "libcutils",
+                "libhardware",
+                "libbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -23811,7 +23944,7 @@ cc_prebuilt_library_shared {
 }
 
 prebuilt_rfsa {
-    name: "bm2n31",
+    name: "vendor_lib_rfsa_adsp_bm2n31_bin",
     filename: "bm2n31.bin",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/bm2n31.bin",
@@ -23820,7 +23953,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "bm2n32",
+    name: "vendor_lib_rfsa_adsp_bm2n32_bin",
     filename: "bm2n32.bin",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/bm2n32.bin",
@@ -23829,7 +23962,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "bm2n33",
+    name: "vendor_lib_rfsa_adsp_bm2n33_bin",
     filename: "bm2n33.bin",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/bm2n33.bin",
@@ -23838,7 +23971,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "bm2n34",
+    name: "vendor_lib_rfsa_adsp_bm2n34_bin",
     filename: "bm2n34.bin",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/bm2n34.bin",
@@ -23847,7 +23980,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "bm2n35",
+    name: "vendor_lib_rfsa_adsp_bm2n35_bin",
     filename: "bm2n35.bin",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/bm2n35.bin",
@@ -23856,7 +23989,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "bm2n36",
+    name: "vendor_lib_rfsa_adsp_bm2n36_bin",
     filename: "bm2n36.bin",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/bm2n36.bin",
@@ -23865,7 +23998,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "bm2n37",
+    name: "vendor_lib_rfsa_adsp_bm2n37_bin",
     filename: "bm2n37.bin",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/bm2n37.bin",
@@ -23874,7 +24007,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "bm2n54",
+    name: "vendor_lib_rfsa_adsp_bm2n54_bin",
     filename: "bm2n54.bin",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/bm2n54.bin",
@@ -23883,7 +24016,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "bm2n55",
+    name: "vendor_lib_rfsa_adsp_bm2n55_bin",
     filename: "bm2n55.bin",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/bm2n55.bin",
@@ -23892,7 +24025,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "bm2n56",
+    name: "vendor_lib_rfsa_adsp_bm2n56_bin",
     filename: "bm2n56.bin",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/bm2n56.bin",
@@ -23901,7 +24034,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libQnnHtpV73",
+    name: "vendor_lib_rfsa_adsp_libQnnHtpV73_so",
     filename: "libQnnHtpV73.so",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/libQnnHtpV73.so",
@@ -23910,7 +24043,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libQnnHtpV73Skel",
+    name: "vendor_lib_rfsa_adsp_libQnnHtpV73Skel_so",
     filename: "libQnnHtpV73Skel.so",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/libQnnHtpV73Skel.so",
@@ -23919,7 +24052,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libadsp_jpege_skel",
+    name: "vendor_lib_rfsa_adsp_libadsp_jpege_skel_so",
     filename: "libadsp_jpege_skel.so",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/libadsp_jpege_skel.so",
@@ -23928,7 +24061,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libapn_dsp_skel",
+    name: "vendor_lib_rfsa_adsp_libapn_dsp_skel_so",
     filename: "libapn_dsp_skel.so",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/libapn_dsp_skel.so",
@@ -23937,7 +24070,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libarc_htp_driver_skel",
+    name: "vendor_lib_rfsa_adsp_libarc_htp_driver_skel_so",
     filename: "libarc_htp_driver_skel.so",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/libarc_htp_driver_skel.so",
@@ -23946,7 +24079,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libbitml_nsp_skel",
+    name: "vendor_lib_rfsa_adsp_libbitml_nsp_skel_so",
     filename: "libbitml_nsp_skel.so",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/libbitml_nsp_skel.so",
@@ -23955,7 +24088,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libbitml_nsp_v2_skel",
+    name: "vendor_lib_rfsa_adsp_libbitml_nsp_v2_skel_so",
     filename: "libbitml_nsp_v2_skel.so",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/libbitml_nsp_v2_skel.so",
@@ -23964,7 +24097,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libcamera_nn_skel",
+    name: "vendor_lib_rfsa_adsp_libcamera_nn_skel_so",
     filename: "libcamera_nn_skel.so",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/libcamera_nn_skel.so",
@@ -23973,7 +24106,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libdspCV_skel",
+    name: "vendor_lib_rfsa_adsp_libdspCV_skel_so",
     filename: "libdspCV_skel.so",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/libdspCV_skel.so",
@@ -23982,7 +24115,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libdsp_streamer_binning",
+    name: "vendor_lib_rfsa_adsp_libdsp_streamer_binning_so",
     filename: "libdsp_streamer_binning.so",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/libdsp_streamer_binning.so",
@@ -23991,7 +24124,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libfastcvadsp",
+    name: "vendor_lib_rfsa_adsp_libfastcvadsp_so",
     filename: "libfastcvadsp.so",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/libfastcvadsp.so",
@@ -24000,7 +24133,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libfastcvdsp_skel",
+    name: "vendor_lib_rfsa_adsp_libfastcvdsp_skel_so",
     filename: "libfastcvdsp_skel.so",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/libfastcvdsp_skel.so",
@@ -24009,7 +24142,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libhdr_skel",
+    name: "vendor_lib_rfsa_adsp_libhdr_skel_so",
     filename: "libhdr_skel.so",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/libhdr_skel.so",
@@ -24018,7 +24151,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libhme_dsp_skel",
+    name: "vendor_lib_rfsa_adsp_libhme_dsp_skel_so",
     filename: "libhme_dsp_skel.so",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/libhme_dsp_skel.so",
@@ -24027,7 +24160,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libmctfengine_skel",
+    name: "vendor_lib_rfsa_adsp_libmctfengine_skel_so",
     filename: "libmctfengine_skel.so",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/libmctfengine_skel.so",
@@ -24036,7 +24169,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libscveT2T_skel",
+    name: "vendor_lib_rfsa_adsp_libscveT2T_skel_so",
     filename: "libscveT2T_skel.so",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/libscveT2T_skel.so",
@@ -24045,7 +24178,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libsw2dlut_dsp_skel",
+    name: "vendor_lib_rfsa_adsp_libsw2dlut_dsp_skel_so",
     filename: "libsw2dlut_dsp_skel.so",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/libsw2dlut_dsp_skel.so",
@@ -24054,7 +24187,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "nlc",
+    name: "vendor_lib_rfsa_adsp_nlc_so",
     filename: "nlc.so",
     owner: "fcnt",
     src: "proprietary/vendor/lib/rfsa/adsp/nlc.so",
@@ -25628,7 +25761,7 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so",
             ],
             shared_libs: [
-                "libprotobuf-cpp-full",
+                "libprotobuf-cpp-full-21.7",
                 "libcutils",
                 "liblog",
                 "libhidlbase",
@@ -27054,7 +27187,7 @@ cc_prebuilt_binary {
                 "libbitmlenginev2",
                 "libchilog",
                 "libui",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "vendor.qti.hardware.camera.postproc@1.0-service-impl",
                 "libz",
                 "libdl",
@@ -27293,6 +27426,7 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/hw/android.hardware.sensors@2.1-service.multihal",
             ],
             shared_libs: [
+                "libbase_shim",
                 "android.hardware.sensors@2.0",
                 "android.hardware.sensors@2.0-ScopedWakelock",
                 "android.hardware.sensors@2.1",
@@ -27427,7 +27561,7 @@ cc_prebuilt_binary {
                 "camx.device@3.4-impl",
                 "camx.device@3.5-impl",
                 "camx.device@3.6-impl",
-                "libtinyxml2",
+                "libtinyxml2-v34",
                 "android.hardware.graphics.mapper@2.0",
                 "android.hardware.graphics.mapper@3.0",
                 "android.hardware.graphics.mapper@4.0",
