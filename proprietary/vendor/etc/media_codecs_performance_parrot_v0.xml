@@ -141,11 +141,11 @@
             <Limit name="measured-frame-rate-1920x1080" range="35-80" />
         </MediaCodec>
         <MediaCodec name="c2.qti.hevc.encoder" type="video/hevc" update="true">
-            <Limit name="measured-frame-rate-320x240" range="98-103" />
+            <Limit name="measured-frame-rate-320x240" range="230-260" />
             <Limit name="measured-frame-rate-720x480" range="63-210" />
             <Limit name="measured-frame-rate-1280x720" range="50-100" />
             <Limit name="measured-frame-rate-1920x1080" range="18-50" />
-            <Limit name="measured-frame-rate-3840x2160" range="9-11" />
+            <Limit name="measured-frame-rate-3840x2160" range="31-44" />
         </MediaCodec>
         <MediaCodec name="c2.qti.hevc.encoder.cq" type="video/hevc" update="true">
             <Limit name="measured-frame-rate-320x240" range="240-320" />
